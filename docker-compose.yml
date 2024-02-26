@@ -1,0 +1,12 @@
+version: "3"
+services:
+  lowcoder:
+    image: moushengkoo/lowcoder_cn:latest
+    container_name: lowcoder
+    ports:
+    # 暴露端口:内部端口，如果端口被占用，修改前面的端口，后面的端口不要修改
+      - "3000:3000"
+    volumes:
+      - ./stacks:/lowcoder-stacks
+    restart: always
+    
